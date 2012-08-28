@@ -1,0 +1,314 @@
+/* reseta o padding */
+#content .content-pad { 
+	padding: 0px;
+}
+
+/* coloca margin pra separar o menu fixo do topo do resto */
+#page-main {
+   margin-top: 10px;
+}
+
+/* leayout arrendodado com sombra para conteudo de Pages e Posts */
+.one-sidebar-left #pagelines_content #column-wrap { 
+width: 78.5%;
+border: #DDD solid .1em;
+border-radius: .9em;
+margin: 0px;
+box-shadow: 5px 5px 5px #EEE;
+background: white;
+}
+
+hr, .fpost, .clip_box, .widget-title, .metabar a, #morefoot .widget-title, #site #dsq-content h3, .navigation_wrap { 
+border-bottom: .1em solid transparent;
+}
+
+/* equaliza o padding onde é publicado o post ou page */
+.one-sidebar-left #column-main .mcolumn-pad, .two-sidebar-left #column-main .mcolumn-pad {
+padding: 1em;
+}
+
+/* diminui padding inferior das entradas influencia Pages e Posts */
+.hentry-pad { 
+padding: 0 0 1em;
+}
+
+/* tira uma margem bottom que não sei pra que serve */
+.hentry, .clip_box { 
+margin: 0;
+}
+
+/* define a largura na linha separadores de itens do layout como widgests, comentarios de post e estt. a cor está em transparente aparentemente por ser algum truque a cor é modificada abaixo */
+hr, .fpost, .clip_box, .widget-title, .metabar a, #morefoot .widget-title, #site #dsq-content h3, .navigation_wrap { 
+border-bottom: .25em solid rgba(238, 238, 238, 0);
+}	
+
+/* altera a cor da linha limitadora acima */
+hr, .fpost, .clip_box, .widget-title, .metabar a, #morefoot .widget-title, #site #dsq-content h3, .navigation_wrap, .setup_area, .fpost .post-thumb img, .clip .clip-thumb img, .author-thumb img, ul.sf-menu ul li {
+border-color: #F2F2F2; /*deixei em defalut */
+}
+
+/* controla a margin superior e inferior do conteudo base */
+section.copy {
+margin: 0.6em 0;
+}
+
+/* arredonda navegação de posts */
+.mcolumn-pad > :first-child, .copy-pad > :first-child, .scolumn-pad > :first-child, .sidebar_widgets > :first-child {
+margin-top: 0;
+border-radius: 3em;
+border: none;
+}
+
+
+/* layout do conteúdo das pages e posts */
+
+/* cabeçalho de posts e pages */
+#postloop .post-title-section {
+padding: .5em 1.5em 0.5em 1em;
+border: .2em solid white;
+border-radius: 1em;
+background: #9dcfe0;
+-webkit-box-shadow: 0em 0em .3em .1em #ADADAD;
+box-shadow: 0em 0em .3em .1em #ADADAD;
+
+}
+
+.post-meta {
+margin-bottom: 0em;
+}
+
+/* coloca lado a lado titulo e dados de postagem */
+.post-title-section {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    	/* se colocar reduz o tamanho da barra
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: justify;
+    box-pack: justify; */
+}
+
+/* reserva 50% pra titulo */
+.post-title {
+width: 50%;
+}
+
+/* coloca dados do post na direita */
+.metabar {
+width: 50%;	
+display: -webkit-box;
+-webkit-box-pack: end;
+}
+
+/* diagramação do texto de conteudo para pages e posts */
+.entry_content {
+padding: 0 1.5em;
+margin-top: 1em;
+text-align: justify;
+background: white;
+
+}
+
+.post-title-section em, .post-title-section .metabar-pad a{
+	color: #fff;
+	text-decoration: none;
+	border: 0px;
+	text-transform:uppercase;
+	background: none repeat scroll 0 0 white;
+    border: 0.1em solid gray;
+    border-radius: 1.3em 1.3em 1.3em 1.3em;
+}
+
+
+.post-title-section a, .post-title-section a:hover {
+	margin: 0em 0.16em;
+	color: #000;
+	text-decoration: none;
+}
+
+.post-title-section a:hover {
+	font-weight: bold;
+}
+
+/* ======================
+   ===                ===
+   ===    sidebar1    ===
+   ===                ===
+   ====================== */
+
+/* borda arredondada com sommbras */
+.one-sidebar-left #pagelines_content #sidebar1 {
+	width: 98%;
+	border: #DDD solid .1em;
+	border-radius: .9em;
+	box-shadow: 5px 5px 5px #EEE;
+	background: white;
+}
+
+/* tira titulo do widget do cubepoint */
+.widget_cp_pointswidget .widget-title{
+	display: none;
+}
+
+/* lanoba shortcode */
+.profile_user {
+display: -webkit-box;
+-webkit-box-orient: horizontal;
+-webkit-box-align: center;
+display: -moz-box;
+-moz-box-orient: horizontal;
+-moz-box-align: center;
+
+
+}
+
+.profile_avatar{
+margin: 0 1em .25em 0;
+}
+
+.profile_display_name {
+	font-weight: bold;
+}
+
+.profile_logout, .botao-base, .botao-base a:hover {
+-webkit-appearance: button;
+/*Botao Logout*/
+-moz-appearance: button-bevel;
+padding: 3px 9px;
+width: 47px;
+text-decoration: none;
+/*display: inline;*/
+}
+
+/* ======================
+   ===                ===
+   ===    sub menu    ===
+   ===                ===
+   ====================== */
+
+/* base vasada de cabo a rabo */
+#secondnav.container {
+background: #FC0;
+margin-bottom: .8em;
+}
+
+/* acerta padding do site para não ficar espaço entre o menu fixo e o segundo menu */
+body.navbar_fixed .page-canvas {
+padding-top: 40px;
+}
+
+/* define font e distancia entre itens do menu  */
+#nav .content-pad, #secondnav .content-pad {
+padding-top: 0px;
+padding-bottom: 0px;
+font-size: 120%;
+font-weight: bolder;
+}
+
+/* define altura do menu */
+#secondnav ul li {
+	line-height: 2.3em;
+}
+
+
+/* define cor do texto do menu */
+#secondnav li a, #secondnav li a:hover {
+display: block;
+padding: 3px 8px;
+border: none;
+color: #000;
+}
+
+/* faz o bg mudar de cor em hover  */
+#secondnav ul li:hover {
+float: left;
+background: #FFA100;
+}
+
+/* =========================
+   ===                   ===
+   ===    multi posts    ===
+   ===                   ===
+   ========================= */
+
+/* controla largura do clip-box */
+#pagelines_content .clip {
+width: 49%;
+}
+
+.post-nocontent.post-meta {
+margin-bottom: 0;
+border-radius: 0.6em;
+background: white;
+-webkit-box-shadow: 0em 0em 1em .1em rgba(0, 0, 0, 0.25);
+box-shadow: 0em 0em 2em .2em rgba(0, 0, 0, 0.25); /* Box com sombra no mozilla firefox */
+padding: .5em 1em;
+}
+
+.blocks .metabar-pad {
+	display: none;
+}
+
+.blocks .post-title {
+	width: 100%;
+//	min-height: 30px;
+}
+
+.continue_reading_link {
+-webkit-appearance: button;
+-moz-appearance: button-bevel;
+/*
+-webkit-appearance:-moz-window-button-box: ;
+*/
+padding: 3px 9px;
+width: 78px;
+float: right;
+}
+
+/* ==========================
+   ===                    ===
+   ===    pagina login    ===
+   ===                    ===
+   ========================== */
+
+.lado-esquerdo {
+	display: inline-block;
+	float: left;
+	max-width: 370px;
+	min-width: 180px;
+}
+
+#post-274 #lanoba {
+	margin: 24px 0px 0px 27%;
+}
+
+#post-274 .entry_wrap {
+	border: 0.1em solid #DDDDDD;
+    border-radius: 1em 1em 1em 1em;
+    margin: 1em 0 0 0;
+    padding: 7px 0 19px;
+    background: white;
+    box-shadow: 5px 5px 5px #EEE;
+}
+
+#lanoba .logado {
+	margin: 0 1.3em 0 0;
+}
+
+#post-274 .youtube {
+	float: right;
+}
+
+.texto {
+	float: none;
+	padding: 0 12%;
+	text-align: center;
+	color: #5A7FC4;
+	margin: 0px;
+}
+ 
+.lado-esquerdo p {
+	display: none;
+}

@@ -1,0 +1,26 @@
+ .settingsTBL{ 
+     background-color: #ccc; 
+     margin-top: 20px;
+ }
+ .settingsTBL td{ 
+     background-color: white;
+     padding: 5px;
+     line-height: 26px;
+ }    
+ .settingsTBL td:first-child{ 
+     background-color: #f1f1f1; 
+     width: 460px !important; 
+     height: 30px; 
+     padding-left: 2px; 
+ }
+  .tbl_label{ 
+      text-align: center; 
+      background-color: #777 !important; 
+      color: white; 
+      font-weight: bold; 
+      font-size: 12pt; 
+  }
+  lb_sharebutton{
+      border: 0px !important; 
+      background-color: inherit !important;
+  }

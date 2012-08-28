@@ -1,0 +1,146 @@
+********************************************************************************
+INSTALLER-LOG
+********************************************************************************
+START-PRECHECK:04:01:01
+----------------------------------
+ENVIROMENT:
+version: 0.3.1
+log level: 1
+php:5.4.4
+php sapi: apache2handler
+mysql:5.5.25a
+server: Apache/2.4.2 (Win32) OpenSSL/1.0.1c PHP/5.4.4
+document root: C:\xampp\htdocs\devloc
+document root 755: 1
+secure build name: 503cce583634c4556_20120828_gamecdilan
+----------------------------------
+SETTINGS:
+database connection => host:localhost | database:devloc 
+old url:'http://localhost/dev'
+new url:'http://localhost/devloc'
+disable ssl: false
+zip manual: false
+zip archive installed: true
+----------------------------------
+DROP TABLES STATUS:
+results => No tables found to remove.
+END-PRECHECK:04:01:01
+
+********************************************************************************
+PACKAGE-EXTRACTION
+********************************************************************************
+START-EXTRACTION:04:01:01
+
+starting package extraction
+zip information:
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 2373
+    [filename] => C:\xampp\htdocs\devloc\503cce583634c4556_20120828_gamecdilan_package.zip
+    [comment] => 
+)
+
+zip close response: 1
+package extracted complete
+
+END-EXTRACTION:04:01:18
+
+********************************************************************************
+SCRIPT FILES ROUTINE
+********************************************************************************
+START-FILES:04:01:18
+
+new url is: http://localhost/devloc
+scrubbed old url(s) in installer-data.sql:
+- http://localhost/dev
+
+finalized scripts:
+- see installer-data.sql for SQL processed.
+- see wp-config.php for updated changes. 
+
+END FILES:04:01:19
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+START-DB:04:01:19
+
+db create: true
+db clean: true
+db replace characters: false
+db mysqli charset: false
+db wait_timeout: 5000
+----------------------------------
+DATABASE RESULTS
+processed queries: 3142 
+process time: 20.2254 sec.
+
+Table Record Counts
+wp_commentmeta:8
+wp_comments:8
+wp_cp:41
+wp_cp_notify:0
+wp_duplicator:1
+wp_frm_display:11
+wp_frm_fields:197
+wp_frm_forms:21
+wp_frm_item_metas:384
+wp_frm_items:65
+wp_links:7
+wp_ngg_album:1
+wp_ngg_gallery:6
+wp_ngg_pictures:22
+wp_options:348
+wp_postmeta:1046
+wp_posts:579
+wp_term_relationships:98
+wp_term_taxonomy:31
+wp_terms:30
+wp_usermeta:194
+wp_users:12
+wp_wti_like_post:8
+
+Transient cached cleanup completed.
+
+----------------------------------
+START SERIALIZATION:04:01:39
+
+serialization query (271):
+SELECT option_id, option_value FROM wp_options 
+
+serialization query (1046):
+SELECT meta_id, meta_value FROM wp_postmeta 
+
+serialization query (194):
+SELECT umeta_id, meta_value FROM wp_usermeta 
+
+serialization replacements:
+updated 3 records
+
+END SERIALIZATION:04:01:39
+
+END DB-ROUTINES:04:01:39
+
+********************************************************************************
+START FINAL CLEANUP
+********************************************************************************
+START-CLEANUP:04:01:39
+
+HTACCESS CHANGES:
+created backup of original .htaccess to htaccess.orig and web.config to web.config.orig
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+updated .htaccess file as follows:
+ # BEGIN WordPress
+	<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /devloc/
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /devloc/index.php [L]
+	</IfModule>
+# END WordPress
+END FINAL:04:01:39
+
