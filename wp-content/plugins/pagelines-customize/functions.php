@@ -131,12 +131,13 @@ add_shortcode( 'mostra_avatar', 'mostra_avatar' );
 
 function botao_facil ( $atts ) {
 	extract( shortcode_atts( array(
-		'text' => 'inativo',
+		'text' => 'voltar',
 		'class' => '',
 		'link' => '#',
 		'width' => '40px',
 		'text_transform' => 'none',
 		'target' => '_self',
+		'display' => 'inline',
 		), $atts ) );
 
 
@@ -148,7 +149,8 @@ function botao_facil ( $atts ) {
 	switch ($text) {
 		case 'voltar':
 			$hecho = '	<div class="botao-base" style="	min-width: 57px;
-														text-transform: uppercase;">
+														text-transform: uppercase;
+														display: block;">
 							<a href="javascript:history.back()">'
 							.$text.'
 							</a>
@@ -156,9 +158,11 @@ function botao_facil ( $atts ) {
 			break;
 		
 		default:
-			$hecho ='	<div class="botao-base '.$class.'" style="min-width:'.$width.';
-																	text-transform: '.$text_transform.';" >
+			$hecho ='	<div class="botao-base '.$class.'" style="	width:'.$width.';
+																	text-transform: '.$text_transform.';
+																	display:'.$display.';" >
 							<a href="'.$link.'" target="'.$target.'">'.$text.'</a>
+							<style>a:hover{width:'.$width.';padding: 0px 9px 2px;}</style>
 						</div>';
 			break;
 	}
