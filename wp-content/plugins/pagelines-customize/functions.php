@@ -81,9 +81,9 @@ add_action('frm_after_update_entry','altera_usermeta_via_form_basico', 20,2);
 function altera_usermeta_via_form_basico ($entry_id, $form_id) {
 
 	if ($form_id == 6) {
-		update_user_meta ($_POST['item_meta'][83], 'first_name', $_POST['item_meta'][85]);
-		update_user_meta ($_POST['item_meta'][83], 'last_name', $_POST['item_meta'][86]);
-		update_user_meta ($_POST['item_meta'][83], 'nickname', $_POST['item_meta'][87]);
+		update_user_meta ($_POST['item_meta'][84], 'first_name', $_POST['item_meta'][85]);
+		update_user_meta ($_POST['item_meta'][84], 'last_name', $_POST['item_meta'][86]);
+		update_user_meta ($_POST['item_meta'][84], 'nickname', $_POST['item_meta'][87]);
 	}
 }
 
@@ -98,12 +98,10 @@ function altera_usermeta_via_form_basico ($entry_id, $form_id) {
 add_action('frm_after_create_entry', 'altera_assinante_para_jogador', 20, 2);
 add_action('frm_after_update_entry', 'altera_assinante_para_jogador', 20, 2);
 function altera_assinante_para_jogador($entry_id, $form_id){
-  if($form_id == 15){ //id do formulario-Termo Uso e Conduta
-  	if ($_POST['item_meta'][157] == 'Li e Aceito' and $_POST['item_meta'][158] == 'Concordo e Aplicarei') {
-	    $permissao = 'a:1:{s:7:"jogador";s:1:"1";}';
-	    update_user_meta( $_POST['item_meta'][160], 'wp_capabilities', $permissao );
-	    update_user_meta( $_POST['item_meta'][160], 'wp_user_level', 0 );
-  	}
+  if($form_id == 22){ //id do formulario-Termo Uso e Conduta
+		$rafa = get_userdata($_POST['item_meta'][230]);
+		$rafa -> set_role('jogador');
+		update_user_meta ($_POST['item_meta'][230], 'show_admin_bar_front' , 'false');
   }
 }
 
