@@ -60,6 +60,15 @@ border: none;
 }
 
 
+/* configura footer */
+#footer #simple_nav .content-pad, #footer #simple_nav .content-pad .simplenav {
+  padding: 0px;
+  text-align: right;
+}
+
+
+
+
 /* layout do conteúdo das pages e posts */
 
 /* cabeçalho de posts e pages */
@@ -173,13 +182,13 @@ margin: 0 1em .25em 0;
 }
 
 .profile_logout, .botao-base, .botao-base a:hover {
-	background: none repeat scroll 0 0 #F7F7F7;
-    border: 1px solid #DDDDDD;
-    border-radius: 3em 3em 3em 3em;
-    box-shadow: 0 0 0.1em 0.01em #ADADAD;
-	padding: 0px 9px 2px;
-	text-decoration: none;
-	width: 47px;
+-webkit-appearance: button;
+/*Botao Logout*/
+-moz-appearance: button-bevel;
+padding: 3px 9px;
+width: 47px;
+text-decoration: none;
+/*display: inline;*/
 }
 
 /* ======================
@@ -282,6 +291,11 @@ float: right;
 
 #post-274 #lanoba {
 	margin: 24px 0px 0px 27%;
+  height: 40px;
+}
+
+.jogue {
+  padding: 0 27px;
 }
 
 #post-274 .entry_wrap {
@@ -313,3 +327,225 @@ float: right;
 	display: none;
 }
 
+/* ==========================
+   ===                    ===
+   ===    google maps     ===
+   ===                    ===
+   ========================== */
+
+.google-map-placeholder {
+	float: right;
+	margin-bottom: 1em;
+}
+
+/* ===============================
+   ===                         ===
+   ===    pg redes sociais     ===
+   ===                         ===
+   =============================== */
+
+td.logo {
+	height: 64px;
+  width: 64px;
+}
+
+/* ===================================== */
+/* = Inicio Customização do MoreFoot   = */
+/* ===================================== */
+
+#morefoot_area {
+  background: #F2F2F2;
+  margin-top: 1em;
+}
+
+
+
+#list_sb_fullwidth li {
+  display: inline;
+    float: left;
+    padding: 20px;
+}
+
+.ngg-widget img {
+    border: none;
+    margin: 2px 12px 12px 2px;
+    padding: 1px;
+}
+.entry-title {
+font-size: 15px;
+font-weight: bold;
+color: #88898A;
+border-color: #A8A9AA;
+}
+
+/* ===================================== */
+/* =    Video contondando texto        = */
+/* ===================================== */
+
+.polaroid-youtube{
+    float:right;
+    margin:0 0 0 26px;
+    text-align: center;
+    padding: 13px;
+    }
+.polaroid-youtube p {
+    display: none;
+    }
+.polaroid-youtube h6 {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+
+/* =====================================
+   =      Esconde SideBar principal e  = 
+   =      indice no Template 3         =
+   ===================================== */
+
+  .gamma #sb_primary {
+    display: none
+  }    
+  .gama .widget-pad {
+    display: none;
+  }
+
+/* =====================================
+   = Esconde SideBar Como Jogar        = 
+   = Template perfil,default,1,2,4,5   =
+   = e nos posts e categorias          =
+   ===================================== */
+  }
+  .default #sb_tertiary {
+    display: none;
+  }
+  .alpha #sb_tertiary {
+    display: none;
+  }
+  .beta #sb_tertiary {
+    display: none;
+  }
+  .delta #sb_tertiary {
+    display: none;
+  }
+  .epsilon #sb_tertiary {
+    display: none;
+  }
+  .perfil #sb_tertiary {
+    display: none;
+  }
+
+  .single-format-standard #sb_tertiary {
+    display: none;
+  }
+
+  .category #sb_tertiary {
+    display: none;
+  }
+
+
+/* =====================================
+   = Elima o bug da barra branca       =
+   = no título dos post                =
+   ===================================== */
+
+ .metabar-pad {
+    display: none;
+  }
+
+/* =================================
+   =      shortcod botao           =
+   ================================= */
+
+.bb {
+  display: inline-block;
+  .ie7-inline-block();
+  padding: 4px 10px 4px;
+  margin: 3px; // For input.btn
+  color: black;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255,255,255,.75);
+  vertical-align: middle;
+  background-color: #FAA732;
+  border: 1px solid #FAA42C;
+  border-radius: .3em;
+  cursor: pointer;
+
+  // Give IE7 some love
+  .ie7-restore-left-whitespace();
+}
+
+// Hover state
+.bb a:hover {
+  text-decoration:none;
+}
+.bb a:hover, .bb a {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* =================================
+   =      tabela de trofeus        =
+   =      custom display           =
+   =       dashboard jogador       =
+   ================================= */
+
+#post-102 td {
+  bordertop: .2em solid #fff;
+}
+
+#post-102 .dash-habilidade {
+  width: 140px;
+}
+
+#post-102 .dash-pontos {
+  width: 66px;
+}
+
+#post-102 .fantasma {
+  opacity:0.4;
+}
+
+#post-102 .dash-th {
+  background: #FFC266;
+  color: #fff;
+}
+
+#post-102 .dash-odd {
+  background: #F7F7F7;
+}
+
+#post-102 .dash-even {
+  background: #EAEAEA;
+}
+
+#post-102 .dash-th th {
+  border-left: .2em solid #fff;
+}
+
+/* ====================================
+   =          divs vazias             =
+   =      usadas para condicionais    =
+   =     feitas com custom display    =
+   =         do Formidable            =
+   ==================================== */
+
+.div-vazia {
+  display: none;
+}
+
+/* ====================================
+   =          lesta medalhas          =
+   =             dashboard            =
+   ==================================== */
+
+.medalha li {
+  list-style: none;
+}
+
+.medalha-em-linha {
+    float: left;
+}
+
+.thumb-64 {
+  width: 64px;
+}

@@ -552,7 +552,7 @@ if ($action == 'dbconnect-test') {
 		dinstaller_log("server: {$_SERVER['SERVER_SOFTWARE']}");
 		dinstaller_log("document root: {$GLOBALS['CURRENT_ROOT_PATH']}");
 		dinstaller_log("document root 755: {$root_path_chown}");
-		dinstaller_log("secure build name: 5037ed2d9702a2022_20120824_gamecdilan");
+		dinstaller_log("secure build name: 505b6b8d971dc4016_20120920_gamecdilan_copia_para_dev");
 		dinstaller_log("----------------------------------");
 		dinstaller_log("SETTINGS:");
 		dinstaller_log("database connection => host:{$dbhost} | database:{$dbname} ");
@@ -590,8 +590,8 @@ if ($action == 'dbconnect-test') {
 		if($filename == null) {
 			die(MSG_ERR_ZIPNOTFOUND  . $tryagain_html);
 		}
-		if ('5037ed2d9702a2022_20120824_gamecdilan_package.zip' != $zip_name) {
-			dinstaller_log("WARNING: This Package Set may be incompatible!  \nBelow is a summary of the package this installer was built with and the package used. To guarantee accuracy make sure the installer and package match. For more details see the online FAQs.  \ncreated with:   5037ed2d9702a2022_20120824_gamecdilan_package.zip  \nprocessed with: {$zip_name}  \n");
+		if ('505b6b8d971dc4016_20120920_gamecdilan_copia_para_dev_package.zip' != $zip_name) {
+			dinstaller_log("WARNING: This Package Set may be incompatible!  \nBelow is a summary of the package this installer was built with and the package used. To guarantee accuracy make sure the installer and package match. For more details see the online FAQs.  \ncreated with:   505b6b8d971dc4016_20120920_gamecdilan_copia_para_dev_package.zip  \nprocessed with: {$zip_name}  \n");
 			$package_set_warning = true;
 		}
 		
@@ -853,7 +853,7 @@ if ($action == 'dbconnect-test') {
 		
 		@unlink('database.sql');
 		
-		$currdata = parse_url("http://localhost/dev"); 
+		$currdata = parse_url("http://game.cdilan.com.br"); 
 		$newdata  = parse_url($new_url);
 		$currpath = dinstaller_add_slash(isset($currdata['path']) ? $currdata['path'] : "");
 		$newpath  = dinstaller_add_slash(isset($newdata['path'])  ? $newdata['path']  : "");
@@ -966,7 +966,7 @@ HTACCESS;
 				<tr valign="top">
 					<td style="width:130px">Package Url</td>
 					<td>
-						<input type="text" name="current_url" id="current_url" value="http://localhost/dev" readonly="true"  class="readonly" />
+						<input type="text" name="current_url" id="current_url" value="http://game.cdilan.com.br" readonly="true"  class="readonly" />
 						<a href="javascript:editNewURL()" id="edit_current_url" style="font-size:12px">edit</a>
 					
 					</td>

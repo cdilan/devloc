@@ -320,7 +320,7 @@ class nggWidget extends WP_Widget {
 				$description  =  htmlspecialchars( stripslashes( nggGallery::i18n($image->description, 'pic_' . $image->pid . '_description') ));
 				
 				//TODO:For mixed portrait/landscape it's better to use only the height setting, if widht is 0 or vice versa
-				$out = '<a href="' . $image->imageURL . '" title="' . $description . '" ' . $thumbcode .'>';
+				$out = '<a target="_blank" href="' . $image->alttext . '" title="' . $description . '" ' . $thumbcode .'>';
 				// Typo fix for the next updates (happend until 1.0.2)
 				$instance['show'] = ( $instance['show'] == 'orginal' ) ? 'original' : $instance['show'];
 				

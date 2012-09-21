@@ -86,11 +86,11 @@
 table.frmcal-calendar .frmcal_date{background-color:#eeeeee;padding:0 5px;text-align:right;-moz-box-shadow:0 2px 5px #dddddd;-webkit-box-shadow:0 2px 5px #dddddd;box-shadow:0 2px 5px #dddddd;-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#dddddd')";filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#dddddd');}
 table.frmcal-calendar .frmcal-today .frmcal_date{background-color:#ffffff;padding:0 5px;text-align:right;-moz-box-shadow:0 2px 5px #dddddd;-webkit-box-shadow:0 2px 5px #dddddd;box-shadow:0 2px 5px #dddddd;-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#dddddd')";filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#dddddd');}
 .frmcal-content{padding:2px 4px;}
-.frm-loading-img{background:url(http://localhost/devloc/wp-content/plugins/formidable/images/ajax_loader.gif) no-repeat center center;padding:6px 12px;}
+.frm-loading-img{background:url(http://dev.cdilan.com.br/wp-content/plugins/formidable/images/ajax_loader.gif) no-repeat center center;padding:6px 12px;}
 #ui-datepicker-div{display:none;z-index:999 !important;}
 .frm_form_fields div.rating-cancel, .frm_form_fields div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden;}
-.frm_form_fields div.rating-cancel a{background:url(http://localhost/devloc/wp-content/plugins/formidable/pro/images/delete.png) no-repeat 0 -16px;}
-.frm_form_fields div.star-rating, .frm_form_fields div.star-rating a{background:url(http://localhost/devloc/wp-content/plugins/formidable/pro/images/star.png) no-repeat 0 0px;}
+.frm_form_fields div.rating-cancel a{background:url(http://dev.cdilan.com.br/wp-content/plugins/formidable/pro/images/delete.png) no-repeat 0 -16px;}
+.frm_form_fields div.star-rating, .frm_form_fields div.star-rating a{background:url(http://dev.cdilan.com.br/wp-content/plugins/formidable/pro/images/star.png) no-repeat 0 0px;}
 .frm_form_fields div.rating-cancel a, .frm_form_fields div.star-rating a{display:block;width:16px;height:100%;background-position:0 0px;border:0;}
 .frm_form_fields div.star-rating-on a{background-position:0 -16px!important;}
 .frm_form_fields div.star-rating-hover a{background-position:0 -32px;}

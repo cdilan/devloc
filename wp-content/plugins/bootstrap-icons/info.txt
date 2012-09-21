@@ -1,0 +1,9 @@
+== Description ==
+
+FREE plugin for PageLines 2.2!
+
+Give your PageLines site added flair with the very <a href="http://twitter.github.com/bootstrap/base-css.html#icons" target="_blank">icons</a> found in <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>. The icons are from the <a href="http://glyphicons.com/" target="_blank">Glyphicons</a> icon set, and with this plugin you're easily able to insert them with a simple shortcode. Available in both black, and white.
+
+== Changelog ==
+
+* Initial release

@@ -55,7 +55,7 @@ function lb_shortcode () {
 	    					</div>
 	    				</div>
 	    				<div class="profile_logout">
-							<a href="'.wp_logout_url().'" title="Logout">Logout</a>
+							<a href="'.wp_logout_url('perfil').'" title="Logout">Logout</a>
 		    			</div>
 	    			</div>';
     	return ($saida);
@@ -124,48 +124,26 @@ function mostra_avatar() {
 add_shortcode( 'mostra_avatar', 'mostra_avatar' );
 
 /*
+// ==============================
+// =      botões voltar         =
+// ==============================
+*/
+
+function botao_voltar () {
+	$hecho = '	<a href="javascript:history.back()">Voltar</a>';
+	return($hecho);
+}
+
+add_shortcode( 'voltar', 'botao_voltar');
+
+/*
 // ====================================================
-// = botões mais utilizados usando shortcode          =
+// = botões mais utilizados usando shortcode  [bb]    =
 // ====================================================
 */
 
-function botao_facil ( $atts ) {
-	extract( shortcode_atts( array(
-		'text' => 'voltar',
-		'class' => '',
-		'link' => '#',
-		'width' => '40px',
-		'text_transform' => 'none',
-		'target' => '_self',
-		'display' => 'inline',
-		), $atts ) );
-
-
-	if ($class=="") $class=$text;
-	if ($text=="" and $class=="" and $link==""){
-		return(false);
-	}
-
-	switch ($text) {
-		case 'voltar':
-			$hecho = '	<div class="botao-base" style="	min-width: 57px;
-														text-transform: uppercase;
-														display: block;">
-							<a href="javascript:history.back()">'
-							.$text.'
-							</a>
-						</div>';
-			break;
-		
-		default:
-			$hecho ='	<div class="botao-base '.$class.'" style="	width:'.$width.';
-																	text-transform: '.$text_transform.';
-																	display:'.$display.';" >
-							<a href="'.$link.'" target="'.$target.'">'.$text.'</a>
-							<style>a:hover{width:'.$width.';padding: 0px 9px 2px;}</style>
-						</div>';
-			break;
-	}
-	return($hecho);
+function botao_generico ( $atts, $content = null ) {
+	return '<span class="bb">' .do_shortcode($content). '</span>';
 }
-add_shortcode( 'botao', 'botao_facil');
+
+add_shortcode ( 'bb', 'botao_generico' );
