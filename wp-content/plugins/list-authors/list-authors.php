@@ -193,6 +193,7 @@ if ( version_compare( $GLOBALS['wp_version'], '2.8', '>=' ) ) {
 
 			$posts = $author->post_count;
 			$name = $author->author_name;
+			$uid = $author->ID;
 
 			if( !$html ) {
 				if ( $posts == 0 ) {
@@ -211,7 +212,7 @@ if ( version_compare( $GLOBALS['wp_version'], '2.8', '>=' ) ) {
 				if ( ! $hide_empty )
 					$link = $name;
 			} else {
-				$link = '<a href="#">' . $name . '</a>';
+				$link = '<a href="perfil-publico?uid='.$uid.'">' . $name . '</a>';
 
 				if ( (! empty($feed_image)) || (! empty($feed)) ) {
 					$link .= ' ';

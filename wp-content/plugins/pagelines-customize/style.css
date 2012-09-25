@@ -538,7 +538,7 @@ border-color: #A8A9AA;
    =             dashboard            =
    ==================================== */
 
-.medalha li {
+.medalha li, .minimedalhas li {
   list-style: none;
 }
 
@@ -549,3 +549,114 @@ border-color: #A8A9AA;
 .thumb-64 {
   width: 64px;
 }
+
+.thumb-24 {
+  width: 32px;
+}
+
+
+/* ========================================
+   =          lista jogadores             =
+   =               público                =
+   ======================================== */
+
+#lista-jogadores {
+  margin: 0em;
+  padding: 0em;
+  float: none;
+  display: block;
+}
+
+#lista-jogadores li {
+  border-radius: 1em 1em 1em 1em;
+  display: inline-block;
+  list-style: none outside none;
+  margin: 0.3em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.jogador-card p:before {
+  display: none;
+}*/
+
+#lista-jogadores a, #lista-jogadores a:hover, #lista-jogadores a:visited   {
+  text-decoration: none;
+}
+
+#lista-jogadores ul {
+  margin: 0px;
+}
+
+#lista-jogadores .avatar {
+  float: left;
+  margin-right: 0.3em;
+  border-radius: 0.5em;
+}
+
+.jogador-card {
+  background: #F1F1F1;
+  border: solid 0.2em white;
+  box-shadow: 5px 5px 5px #EEE;
+}
+
+
+/* ========================================
+   =          perfil do jogador           =
+   =               público                =
+   ======================================== */
+
+#perfil-publico #basico {
+  margin: 0px;
+}
+
+#perfil-publico {
+  margin: 0em -1.5em;
+}
+
+#perfil-publico p{
+  display: none;
+}
+
+#perfil-publico td{
+  padding: 0px;
+}
+
+#basico .avatar {
+  float: left;
+  margin: 0.3em;
+  padding: 0em;
+}
+
+.grupo {
+  margin-right: 0.3em;
+  width: 353px;
+}
+.grupo .userid, .grupo .nome-completo, .grupo .titulo-lh, .grupo .lh, .grupo .telefone {
+  float: none;
+  margin: 0em;
+  padding: 0em;
+}
+
+.grupo .userid, .grupo .titulo-lh{
+  font-weight: bolder;
+}
+
+.grupo .userid {
+  font-size: 150%;
+}
+
+.grupo .nome-completo {
+  font-style: italic;
+}
+
+#perfil-publico th {
+  text-align: right;
+  padding: 2px;
+}
+
+.titulo-grande {
+  background: #9DCFE0;
+  font-size: 150%;
+}
+

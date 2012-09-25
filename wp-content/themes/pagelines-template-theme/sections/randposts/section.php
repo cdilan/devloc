@@ -1,10 +1,10 @@
 <?php
 /*
-	Section: Carousel
-	Author: PageLines
-	Author URI: http://www.pagelines.com
+	Section: Post Randomico
+	Author: Rafael Pires
+	Author URI: http://www.cdilan.com.br
 	Description: Creates a flickr, nextgen, or featured image carousel.
-	Class Name: PageLinesCarousel
+	Class Name: PageLinesPostRandomico
 	Cloning: true
 	Workswith: templates, main, content, header, footer
 	Edition: pro
@@ -16,7 +16,7 @@
  * @package PageLines Framework
  * @author PageLines
  */
-class PageLinesCarousel extends PageLinesSection {
+class PageLinesPostRandomico extends PageLinesSection {
 	
 
 	/**
@@ -40,7 +40,7 @@ class PageLinesCarousel extends PageLinesSection {
 			$num_items = ( ploption('carousel_display_items', $this->oset) ) ? ploption('carousel_display_items', $this->oset) : 9;
 			$scroll_items = ( ploption('carousel_scroll_items', $this->oset) ) ? ploption('carousel_scroll_items', $this->oset) : 6;
 			$anim_speed = ( ploption('carousel_animation_speed', $this->oset) ) ? ploption('carousel_animation_speed', $this->oset) : 800;
-			$callback = ( 0 != ploption('carousel_scroll_time', $this->oset) ) ? ',initCallback: mycarousel_initCallback' : '';			
+			$callback = ( 0 != ploption('carousel_scroll_time', $this->oset) ) ? ',initCallback: postrandom_initCallback' : '';			
 			$auto = ( 0 != ploption('carousel_scroll_time', $this->oset) ) ? round( ploption('carousel_scroll_time', $this->oset) ) / 1000 : 0;
 			
 			
@@ -55,7 +55,7 @@ class PageLinesCarousel extends PageLinesSection {
 	* @TODO document
 	*
 	*/
-	function mycarousel_initCallback(carousel)
+	function postrandom_initCallback(carousel)
 	{
 	    // Disable autoscrolling if the user clicks the prev or next button.
 	    carousel.buttonNext.bind('click', function() {
@@ -185,38 +185,29 @@ class PageLinesCarousel extends PageLinesSection {
 	} else {
 	?>		
 	<div class="<?php echo $carousel_class;?> thecarousel">
-		<ul id="mycarousel" class="mycarousel">
+		<ul id="postrandom" class="postrandom">
 			<?php 
 			
 			if(function_exists('nggDisplayRandomImages')  && $cmode == 'ngen_gallery'){
-		
 				echo do_shortcode('[nggallery id='.$ngen_id.' template=plcarousel]');
-				
 			}elseif(function_exists('get_flickrRSS') && $cmode == 'flickr'){
-			
 				if(!function_exists('get_and_delete_option')):  // fixes instantiation within the function in the plugin :/
 					get_flickrRSS( array(
 						'num_items' => $carouselitems, 
 						'html' => '<li><a href="%flickr_page%" title="%title%"><img src="%image_square%" alt="%title%"/><span class="list-title">%title%</span></a></li>'	
 					));
 				endif;
-			
 			}elseif($cmode == 'hook')
 				pagelines_register_hook('pagelines_carousel_list');
-				
 			else{
-			
 				$carousel_post_query = 'numberposts='.$carouselitems;
-				
 				if($carousel_post_id) 
 					$carousel_post_query .= '&category_name='.$carousel_post_id;
-				
 				$recentposts = get_posts($carousel_post_query);
 				
 				foreach($recentposts as $cid => $c){
-				
 					$a = array();
-				
+			
 					if(has_post_thumbnail($c->ID)){
 						$img_data = wp_get_attachment_image_src( get_post_thumbnail_id( $c->ID ));
 					
@@ -276,13 +267,9 @@ class PageLinesCarousel extends PageLinesSection {
 		
 		$a = wp_parse_args($args, $d);
 		
-		$img_style = sprintf('style="max-height: %spx; max-width: %spx;"', $a['maxheight'], $a['maxwidth']);
+		$link = sprintf('<a class="carousel_image_link" href="%s"><span class="list-title">%s</span></a>', $a['link'], $a['title']);
 		
-		$img = sprintf('<img src="%s" width="%s" height="%s" %s />', $a['img'], $a['width'], $a['height'], $img_style);
-
-		$link = sprintf('<a class="carousel_image_link" href="%s">%s<span class="list-title">%s</span></a>', $a['link'], $img, $a['title']);
-		
-		$out = sprintf('<li class="list-item fix">%s</li>', $link);
+		$out = sprintf('<li class="posts-randomicos">%s</li>', $link);
 		
 		return $out;
 	}
