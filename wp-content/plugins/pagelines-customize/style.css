@@ -660,3 +660,34 @@ border-color: #A8A9AA;
   font-size: 150%;
 }
 
+/* ===========================================
+   =          features topo da tela          =
+   =               público                   =
+   =========================================== */
+
+.clone_3 .content-pad {
+    bottom: 7px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.clone_3 #pagelines_content {
+  position: relative;
+  top: -30px;
+}
+.clone_3 #feature-footer {
+  position: relative;
+  bottom: 45px;
+}
+
+.clone_3 .dcol-pad {
+  height: 172px;
+  padding: 1em;
+}
+
+.clone_3 .fcontent .fheading {
+  margin: 0px;
+  padding: 0px;
+}*/
