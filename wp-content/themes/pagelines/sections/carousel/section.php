@@ -6,7 +6,7 @@
 	Description: Creates a flickr, nextgen, or featured image carousel.
 	Class Name: PageLinesCarousel
 	Cloning: true
-	Workswith: templates, main, content, header, footer
+	Workswith: content, header, footer
 	Edition: pro
 */
 

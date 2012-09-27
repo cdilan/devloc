@@ -552,7 +552,7 @@ if ($action == 'dbconnect-test') {
 		dinstaller_log("server: {$_SERVER['SERVER_SOFTWARE']}");
 		dinstaller_log("document root: {$GLOBALS['CURRENT_ROOT_PATH']}");
 		dinstaller_log("document root 755: {$root_path_chown}");
-		dinstaller_log("secure build name: 505b6b8d971dc4016_20120920_gamecdilan_copia_para_dev");
+		dinstaller_log("secure build name: 5061be04d2ecd8268_20120925_gamecdilan_copia_para_dev_searc");
 		dinstaller_log("----------------------------------");
 		dinstaller_log("SETTINGS:");
 		dinstaller_log("database connection => host:{$dbhost} | database:{$dbname} ");
@@ -590,8 +590,8 @@ if ($action == 'dbconnect-test') {
 		if($filename == null) {
 			die(MSG_ERR_ZIPNOTFOUND  . $tryagain_html);
 		}
-		if ('505b6b8d971dc4016_20120920_gamecdilan_copia_para_dev_package.zip' != $zip_name) {
-			dinstaller_log("WARNING: This Package Set may be incompatible!  \nBelow is a summary of the package this installer was built with and the package used. To guarantee accuracy make sure the installer and package match. For more details see the online FAQs.  \ncreated with:   505b6b8d971dc4016_20120920_gamecdilan_copia_para_dev_package.zip  \nprocessed with: {$zip_name}  \n");
+		if ('5061be04d2ecd8268_20120925_gamecdilan_copia_para_dev_searc_package.zip' != $zip_name) {
+			dinstaller_log("WARNING: This Package Set may be incompatible!  \nBelow is a summary of the package this installer was built with and the package used. To guarantee accuracy make sure the installer and package match. For more details see the online FAQs.  \ncreated with:   5061be04d2ecd8268_20120925_gamecdilan_copia_para_dev_searc_package.zip  \nprocessed with: {$zip_name}  \n");
 			$package_set_warning = true;
 		}
 		
